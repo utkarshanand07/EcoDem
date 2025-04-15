@@ -1,9 +1,6 @@
 package com.marvel.ecodem.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -22,4 +19,26 @@ public class Product {
     private Date releaseDate;
     private boolean productAvailable;
     private int stockQuantity;
+
+    private String imageName;
+    private String imageType;
+    @Lob
+    private byte[] imageData;
+
+    public void setImageName(String originalFilename) {
+    }
+
+    public void setImageType(String contentType) {
+    }
+
+    public void setImageData(byte[] bytes) {
+    }
+
+    public String getImageType() {
+        return imageType;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
 }
