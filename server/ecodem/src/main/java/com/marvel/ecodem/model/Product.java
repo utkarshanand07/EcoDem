@@ -1,6 +1,7 @@
 package com.marvel.ecodem.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -21,7 +22,9 @@ public class Product {
     private int stockQuantity;
 
     private String imageName;
+    @Getter
     private String imageType;
+    @Getter
     @Lob
     private byte[] imageData;
 
@@ -32,13 +35,5 @@ public class Product {
     }
 
     public void setImageData(byte[] bytes) {
-    }
-
-    public String getImageType() {
-        return imageType;
-    }
-
-    public byte[] getImageData() {
-        return imageData;
     }
 }
